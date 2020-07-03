@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    {{#if articles}}
+      {{#each articles}}
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body p-2">
+<!--              <img src="..." class="card-img-top" alt="...">-->
+              <h6 class="card-title">
+                <a href="{{link}}">{{title}}</a>
+              </h6>
+              <p class="card-text">
+                {{summary}}
+              </p>
+              <a class="card-link" href="#" data-type="add-to-fav" data-id="{{_id}}"><i class="fa fa-plus"></i> Add To Favorites</a>
+            </div>
+          </div>
+        </div>
+
+      {{/each}}
+    {{else}}
+      <h1>Sorry No articles... why not <a href="#">Scrape Some</a>! </h1>
+    {{/if}}
+  </div>
+</div>
+
