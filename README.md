@@ -3,7 +3,7 @@
 ## Overview
 An app that scrapes articles from the TheNextWeb.com website and lets users save articles and leave comments on the latest news.
 
-![Website](https://github.com/llh914/Mongo-Scraper/blob/master/public/assets/images/nyt.png)
+![Website](https://github.com/torqie/news-scraper/blob/master/public/images/screenshot.png)
 
 ## How It Works
 - Scrape articles by clicking the "Scrape Some" button.
