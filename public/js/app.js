@@ -19,7 +19,6 @@ $(document).ready(function() {
   });
 
   $(document).on("click", "#add-comment-button", async function(event) {
-    alert("hello");
     event.preventDefault();
     const comment = await axios.post('/api/comments/' + $('#add-comment-button').attr('data-id'), {
       name: $('#comment_name').val(),
