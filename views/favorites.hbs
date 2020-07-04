@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    {{#if articles}}
+      {{#each articles}}
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="card-body p-2">
+              <!--<img src="..." class="card-img-top" alt="...">-->
+              <h6 class="card-title">
+                <a href="{{link}}">{{title}}</a>
+              </h6>
+              <p class="card-text">
+                {{summary}}
+              </p>
+              <a class="card-link" href="#" data-type="add-to-fav" data-id="{{_id}}">
+                  <i class="fa fa-minus"></i> Remove Favorite
+              </a>
+              <a class="card-link add-comment" href="#"  data-id="{{_id}}">
+                <i class="fa fa-plus"></i> Add Comment
+              </a>
+              {{#if comments}}
+                <hr />
+                <h5 mt-2>Comments</h5>
+                <div class="media">
+                  <div class="media-body">
+                    <h5 class="mt-0">{{comments.name}}</h5>
+                    {{comments.body}}
+                    <br />
+                    <small><a href="#" data-type="remove-comment" data-id="{{comments._id}}">Remove Comment</a></small>
+                  </div>
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+
+
+      {{/each}}
+    {{else}}
+      <div class="row">
+        <div class="col text-center">
+          <h1>Sorry No Favorite Articles... why not <a href="/">go find some</a>? </h1>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</div>
+
+
+

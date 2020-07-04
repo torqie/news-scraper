@@ -13,4 +13,15 @@ module.exports = (app) => {
       console.log(err)
     }
   });
+
+  app.get('/favorites', async (req, res) => {
+    try {
+      const articles = await axios.get('/api/articles/favorites');
+      res.render('favorites', {
+        articles: articles.data
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  })
 };

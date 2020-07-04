@@ -9,6 +9,10 @@ module.exports = (app) => {
   app.get('/api/scrape', articlesController.scrape);
   // Get All Articles
   app.get('/api/articles', articlesController.all);
+  // Get All Favorite Articles
+  app.get('/api/articles/favorites', articlesController.allFavorites);
+  // Update a articles saved value
+  app.put('/api/articles/:id', articlesController.updateFavorite);
   // Get A Single Article
   app.get('/api/articles/:id', articlesController.one);
   // Delete A Article
@@ -21,7 +25,7 @@ module.exports = (app) => {
   // Get A Single Comment
   app.get('/api/comments/:id', commentsController.one);
   // Create A Comment
-  app.post('/api/comments', commentsController.create);
+  app.post('/api/comments/:id', commentsController.create);
   // Delete A Comment
   app.delete('/api/comments/:id', commentsController.delete);
 };
